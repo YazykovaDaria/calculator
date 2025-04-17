@@ -12,7 +12,7 @@ export default defineConfig({
     resolve: {
         alias: {
             "@app": path.resolve(__dirname, "./src/app/index.ts"),
-            "@widgets": path.resolve(__dirname, "./src/widgets/index.ts"),
+            "@public": path.resolve(__dirname, "./src/public"),
             "@features": path.resolve(__dirname, "./src/features/index.ts"),
             "@pages": path.resolve(__dirname, "./src/pages/index.ts"),
             "@entities": path.resolve(__dirname, "./src/entities/index.ts"),
