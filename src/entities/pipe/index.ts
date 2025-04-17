@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-// import { Product } from "@data";
+import { Product } from "@data";
 
 type Pipe = {
-    pipe: string;
+    pipe: Product | null;
 };
 const initialState: Pipe = {
-    pipe: "test",
+    pipe: null,
 };
 
 export const pipeSlice = createSlice({
