@@ -12,7 +12,7 @@ export const BucketPage = () => {
     const items = useAppSelector((state) => state.bucket);
     if (items.length === 0)
         return (
-            <p className="font-semibold text-xl text-center">
+            <p className="font-semibold text-xl text-center mt-6">
                 Нет товаров в корзине
             </p>
         );
@@ -23,8 +23,8 @@ export const BucketPage = () => {
     }, 0);
 
     return (
-        <section className="flex flex-col gap-4">
-            <h2 className="font-semibold text-xl">Корзина</h2>
+        <section className="flex flex-col gap-4 px-3 py-6">
+            <h2 className="font-semibold text-xl text-center">Корзина</h2>
             <div className="overflow-x-auto">
                 <Table>
                     <TableHead>

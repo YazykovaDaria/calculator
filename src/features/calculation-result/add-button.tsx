@@ -1,16 +1,13 @@
 import { ComponentProps } from "react";
+import { Button } from "flowbite-react";
 
 export const AddButton = ({
     type = "button",
     ...props
 }: ComponentProps<"button">) => {
     return (
-        <button
-            type={type}
-            {...props}
-            className="text-center hover:cursor-pointer hover:text-blue-700"
-        >
+        <Button size="xs" type={type} {...props}>
             В корзину
-        </button>
+        </Button>
     );
 };

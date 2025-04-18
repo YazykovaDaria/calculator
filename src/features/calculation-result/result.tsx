@@ -7,7 +7,7 @@ import {
 } from "flowbite-react";
 import { useAppSelector } from "@entities";
 import { calculateArea } from "@shared";
-
+import { PipeRow } from "./pipe-row";
 import { ListRow } from "./list-row";
 
 export const Result = () => {
@@ -19,10 +19,12 @@ export const Result = () => {
 
     return (
         <section className="flex flex-col gap-4">
-            <h2 className="font-semibold text-xl">Результаты</h2>
+            <h2 className="font-semibold text-xl">Результат</h2>
             <div>
                 <p>{`Площадь покрытия: ${area > 1 ? area : 0} м²`}</p>
-                <p>{`Размер ячейки: ${frame ? frame.step : "0"} м`}</p>
+                <p>{`Размер ячейки: ${
+                    frame ? `${frame.step} х ${frame.step}` : "0"
+                } м`}</p>
             </div>
             <div className="overflow-x-auto">
                 <Table>
@@ -39,6 +41,11 @@ export const Result = () => {
                     </TableHead>
                     <TableBody className="divide-y">
                         <ListRow area={area}></ListRow>
+                        <PipeRow
+                            width={width}
+                            length={length}
+                            step={frame?.step}
+                        ></PipeRow>
                     </TableBody>
                 </Table>
             </div>
