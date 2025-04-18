@@ -1,7 +1,7 @@
 export type Product = {
     type: string;
     name: string;
-    material: string;
+    material?: string;
     unit: string;
     width: number;
     price: number;

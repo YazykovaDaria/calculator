@@ -8,7 +8,7 @@
     "skipLibCheck": true,
     "paths": {
       "@features": ["./src/features/index.ts"],
-      "@widgets": ["./src/widgets/index.ts"],
+      "@public/*": ["./public/*"],
       "@pages": ["./src/pages/index.ts"],
       "@entities": ["./src/entities/index.ts"],
       "@shared": ["./src/shared/index.ts"],
